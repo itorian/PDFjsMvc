@@ -6,41 +6,15 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <title>PDF.js Viewer</title>
-    <link href="@Url.Content("~/pdf.js/viewer.css")" rel="stylesheet" type="text/css" />
-    <script type="text/javascript" src="@Url.Content("~/pdf.js/compatibility.js")"></script>
-    <script type="text/javascript" src="@Url.Content("~/pdf.js/l10n.js")"></script>
-    <script type="text/javascript" src="@Url.Content("~/pdf.js/core.js")"></script>
-    <script type="text/javascript" src="@Url.Content("~/pdf.js/util.js")"></script>
-    <script type="text/javascript" src="@Url.Content("~/pdf.js/api.js")"></script>
-    <script type="text/javascript" src="@Url.Content("~/pdf.js/metadata.js")"></script>
-    <script type="text/javascript" src="@Url.Content("~/pdf.js/canvas.js")"></script>
-    <script type="text/javascript" src="@Url.Content("~/pdf.js/obj.js")"></script>
-    <script type="text/javascript" src="@Url.Content("~/pdf.js/function.js")"></script>
-    <script type="text/javascript" src="@Url.Content("~/pdf.js/charsets.js")"></script>
-    <script type="text/javascript" src="@Url.Content("~/pdf.js/cidmaps.js")"></script>
-    <script type="text/javascript" src="@Url.Content("~/pdf.js/colorspace.js")"></script>
-    <script type="text/javascript" src="@Url.Content("~/pdf.js/crypto.js")"></script>
-    <script type="text/javascript" src="@Url.Content("~/pdf.js/evaluator.js")"></script>
-    <script type="text/javascript" src="@Url.Content("~/pdf.js/fonts.js")"></script>
-    <script type="text/javascript" src="@Url.Content("~/pdf.js/glyphlist.js")"></script>>
-    <script type="text/javascript" src="@Url.Content("~/pdf.js/image.js")"></script>
-    <script type="text/javascript" src="@Url.Content("~/pdf.js/metrics.js")"></script>
-    <script type="text/javascript" src="@Url.Content("~/pdf.js/parser.js")"></script>
-    <script type="text/javascript" src="@Url.Content("~/pdf.js/pattern.js")"></script>
-    <script type="text/javascript" src="@Url.Content("~/pdf.js/stream.js")"></script>
-    <script type="text/javascript" src="@Url.Content("~/pdf.js/worker.js")"></script>
-    <script type="text/javascript" src="@Url.Content("~/pdf.js/jpg.js")"></script>
-    <script type="text/javascript" src="@Url.Content("~/pdf.js/jpx.js")"></script>
-    <script type="text/javascript" src="@Url.Content("~/pdf.js/jbig2.js")"></script>
-    <script type="text/javascript" src="@Url.Content("~/pdf.js/bidi.js")"></script>
+    <title>PDF.js Viewer MVC Application</title>
+    @Styles.Render("~/pdf.js/css")
+    @Scripts.Render("~/pdf.js/js")
     <script type="text/javascript">
         var THEFILEPATH = ("@ViewBag.filePath");
         var url = '@Url.Content("~/pdf.js/worker_loader.js")';
         PDFJS.workerSrc = url;
     </script>
-    <script type="text/javascript" src="@Url.Content("~/pdf.js/viewer.js")"></script>
-    <script type="text/javascript" src="@Url.Content("~/pdf.js/debugger.js")"></script>
+    @Scripts.Render("~/pdf.js/vd")
 </head>
 <body>
     <div id="outerContainer">
